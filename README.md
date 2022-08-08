@@ -1,12 +1,12 @@
 # lambda-logging-primer
 
-[AWS Lambda](https://aws.amazon.com/lambda/) is a serverless computes service provided by [Amazon Web Services](https://aws.amazon.com). Since it is serverless, it is important to understand how application log data persists and steps application developers can take to optimize their logging experience.
+[AWS Lambda](https://aws.amazon.com/lambda/) is a serverless computes service provided by [Amazon Web Services](https://aws.amazon.com). Because it is serverless, developers and operations engineers do not have access to the application environment or underlying operating system. Traditional techniques like using `ssh`, `awk`, and `grep` are not available. It is important to understand how application log data is persisted and the steps application developers can take to optimize their logging experience.
 
-The purpose of this repository is to demonstrate these patters in code. The examples are written using [python3](https://www.python.org/) and use the [AWS Serverless Application Model (SAM)](https://aws.amazon.com/serverless/sam/) but the principles can be applied to other supported AWS Lambda runtimes regardless of the deployment mechanism.
+The purpose of this repository is to demonstrate these patters in code. The examples are written using [Python3](https://www.python.org/) and use the [AWS Serverless Application Model (SAM)](https://aws.amazon.com/serverless/sam/) but the principles can be applied to other supported AWS Lambda runtimes regardless of the deployment mechanism.
 
 # Pre-requisites
 
-* [python3.9](https://www.python.org/downloads/)
+* [Python3.9](https://www.python.org/downloads/)
 
 * [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
@@ -39,4 +39,4 @@ AWS Lambda has the ability to log function output to [Amazon CloudWatch](https:/
 
 # Next Steps
 
-Once you have the pre-requisites installed, you can get started with [deploying a simple python3 Lambda function](./deploy-simple.md).
+Once you have the pre-requisites installed, you can get started with [deploying a simple Python3 Lambda function](./deploy-simple.md).

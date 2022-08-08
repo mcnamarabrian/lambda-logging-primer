@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: SAM template to deploy very simple functions that log application data
+
+Globals:
+  Function:
+    Runtime: python3.9
+
+Resources:
+  UserDefinedLoggingFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: User-defined logging random number generator 
+      Handler: index.handler
+      CodeUri: user_defined_logging/
+  
+  DefaultLoggingFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: Standard AWS Lambda logging random number generator 
+      Handler: index.handler
+      CodeUri: default_logging/

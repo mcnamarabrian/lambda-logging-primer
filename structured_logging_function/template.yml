@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: SAM template to deploy very simple functions that log application data
+
+Globals:
+  Function:
+    Runtime: python3.9
+    
+
+Resources:
+  PowertoolsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: AWS Lambda Powertools logging random number generator 
+      Handler: index.handler
+      CodeUri: simple_powertools_logging/
+      Environment:
+        Variables:
+          POWERTOOLS_SERVICE_NAME: simple-powertools-logging
+          LOG_LEVEL: INFO
